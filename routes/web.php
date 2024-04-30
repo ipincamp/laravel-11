@@ -21,4 +21,6 @@ Route::controller(App\Http\Controllers\MahasiswaController::class)->group(functi
 Route::controller(App\Http\Controllers\JadwalKuliahController::class)->group(function () {
     Route::get('/jadwal-kuliah', 'index')->name('jadwal-kuliah.index');
     Route::post('/jadwal-kuliah', 'store')->name('jadwal-kuliah.store');
+    Route::put('/jadwal-kuliah/{id}', 'update')->name('jadwal-kuliah.update');
+    Route::delete('/jadwal-kuliah/{id}', 'destroy')->name('jadwal-kuliah.destroy');
 });
