@@ -29,6 +29,6 @@ Route::controller(App\Http\Controllers\JadwalKuliahController::class)->group(fun
 Route::controller(App\Http\Controllers\ProdiController::class)->group(function () {
     Route::get('/prodi', 'index')->name('prodi.index');
     Route::post('/prodi', 'store')->name('prodi.store');
-    Route::put('/prodi/{id}', 'update')->name('prodi.update');
-    Route::delete('/prodi/{id}', 'destroy')->name('prodi.destroy');
+    Route::put('/prodi/{kode}', 'update')->name('prodi.update');
+    Route::delete('/prodi/{kode}', 'destroy')->name('prodi.destroy');
 });

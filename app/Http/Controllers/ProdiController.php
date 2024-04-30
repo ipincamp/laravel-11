@@ -59,12 +59,11 @@ class ProdiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, String $id)
+    public function update(Request $request, String $kode)
     {
-        $prodi = Prodi::where('id', $id);
+        $prodi = Prodi::where('kode', $kode);
 
         $prodi->update([
-            'kode' => $request->kode,
             'nama' => $request->nama,
         ]);
 
@@ -74,9 +73,9 @@ class ProdiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(String $id)
+    public function destroy(String $kode)
     {
-        Prodi::where('id', $id)->delete();
+        Prodi::where('kode', $kode)->delete();
 
         return back();
     }

@@ -108,6 +108,10 @@
                                 <i class="fas fa-calendar-alt"></i> <span class="d-none d-sm-inline">Jadwal
                                     Perkuliahan</span>
                             </a>
+                            <a href="{{ route('prodi.index') }}"
+                                class="list-group-item list-group-item-action {{ request()->routeIs('prodi.index') ? 'active' : '' }}">
+                                <i class="fas fa-university"></i> <span class="d-none d-sm-inline">Data Prodi</span>
+                            </a>
                         </div>
                     </div>
                 @endauth
