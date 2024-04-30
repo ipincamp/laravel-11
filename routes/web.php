@@ -24,3 +24,11 @@ Route::controller(App\Http\Controllers\JadwalKuliahController::class)->group(fun
     Route::put('/jadwal-kuliah/{id}', 'update')->name('jadwal-kuliah.update');
     Route::delete('/jadwal-kuliah/{id}', 'destroy')->name('jadwal-kuliah.destroy');
 });
+
+// prodi
+Route::controller(App\Http\Controllers\ProdiController::class)->group(function () {
+    Route::get('/prodi', 'index')->name('prodi.index');
+    Route::post('/prodi', 'store')->name('prodi.store');
+    Route::put('/prodi/{id}', 'update')->name('prodi.update');
+    Route::delete('/prodi/{id}', 'destroy')->name('prodi.destroy');
+});
