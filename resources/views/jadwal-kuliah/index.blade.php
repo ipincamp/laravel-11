@@ -7,9 +7,14 @@
                 <div class="card-header d-flex justify-content-between align-items-center">
                     {{ __('Penjadwalan Mata Kuliah') }}
 
-                    <button type="button" class="bg-primary text-white rounded float-end" data-bs-toggle="modal" data-bs-target="#tambahModalJadwal">
-                        <i class="fa fa-plus"></i>
-                    </button>
+                    <div class="d-flex gap-2">
+                        <a href="{{ url('jadwal-kuliah/export') }}" class="btn btn-success btn-sm">
+                            <i class="fa fa-print"></i>
+                        </a>
+                        <button type="button" class="bg-primary text-white rounded float-end" data-bs-toggle="modal" data-bs-target="#tambahModalJadwal">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="card-body">

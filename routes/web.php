@@ -23,4 +23,5 @@ Route::controller(App\Http\Controllers\JadwalKuliahController::class)->group(fun
     Route::post('/jadwal-kuliah', 'store')->name('jadwal-kuliah.store');
     Route::put('/jadwal-kuliah/{id}', 'update')->name('jadwal-kuliah.update');
     Route::delete('/jadwal-kuliah/{id}', 'destroy')->name('jadwal-kuliah.destroy');
+    Route::get('/jadwal-kuliah/export', 'export')->name('jadwal-kuliah.export');
 });

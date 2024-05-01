@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\JadwalsExport;
 use App\Models\JadwalKuliah;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class JadwalKuliahController extends Controller
 {
@@ -95,5 +97,13 @@ class JadwalKuliahController extends Controller
         JadwalKuliah::where('id', $id)->delete();
 
         return back();
+    }
+
+    /**
+     * Export the specified resource to Excel.
+     */
+    public function export()
+    {
+        return Excel::download(new JadwalsExport, 'jadwal-kuliah.xlsx');
     }
 }
