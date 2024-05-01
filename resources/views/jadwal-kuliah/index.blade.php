@@ -8,8 +8,15 @@
                     {{ __('Penjadwalan Mata Kuliah') }}
 
                     <div class="d-flex gap-2">
+                        <form action="{{ route('jadwal-kuliah.import') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <label for="file-upload" class="btn btn-primary btn-sm">
+                                <i class="fa fa-upload"></i>
+                                <input id="file-upload" type="file" name="file" style="display: none;" onchange="this.form.submit()">
+                            </label>
+                        </form>
                         <a href="{{ url('jadwal-kuliah/export') }}" class="btn btn-success btn-sm">
-                            <i class="fa fa-print"></i>
+                            <i class="fa fa-download"></i>
                         </a>
                         <button type="button" class="bg-primary text-white rounded float-end" data-bs-toggle="modal" data-bs-target="#tambahModalJadwal">
                             <i class="fa fa-plus"></i>

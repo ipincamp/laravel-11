@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\JadwalsExport;
+use App\Imports\JadwalsImport;
 use App\Models\JadwalKuliah;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
@@ -105,5 +106,17 @@ class JadwalKuliahController extends Controller
     public function export()
     {
         return Excel::download(new JadwalsExport, 'jadwal-kuliah.xlsx');
+    }
+
+    /**
+     * Import the specified resource from Excel.
+     */
+    public function import(Request $request)
+    {
+        $file = $request->file('file');
+
+        Excel::import(new JadwalsImport, $file);
+
+        return back();
     }
 }

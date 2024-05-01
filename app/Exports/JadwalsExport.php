@@ -12,6 +12,14 @@ class JadwalsExport implements FromCollection
     */
     public function collection()
     {
-        return JadwalKuliah::all();
+        return JadwalKuliah::all([
+            'hari',
+            'mata_kuliah',
+            'waktu_mulai',
+            'waktu_selesai',
+            'ruang',
+            'dosen',
+            'jumlah_mahasiswa',
+        ]);
     }
 }
