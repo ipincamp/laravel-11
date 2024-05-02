@@ -24,3 +24,10 @@ Route::controller(App\Http\Controllers\JadwalKuliahController::class)->group(fun
     Route::put('/jadwal-kuliah/{id}', 'update')->name('jadwal-kuliah.update');
     Route::delete('/jadwal-kuliah/{id}', 'destroy')->name('jadwal-kuliah.destroy');
 });
+
+// pembayaran
+Route::controller(App\Http\Controllers\PembayaranController::class)->group(function () {
+    Route::get('/pembayaran', 'index')->name('pembayaran.index');
+    Route::post('/pembayaran', 'store')->name('pembayaran.store');
+    Route::delete('/pembayaran/{nis}', 'destroy')->name('pembayaran.destroy');
+});

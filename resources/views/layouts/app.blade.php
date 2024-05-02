@@ -108,6 +108,10 @@
                                 <i class="fas fa-calendar-alt"></i> <span class="d-none d-sm-inline">Jadwal
                                     Perkuliahan</span>
                             </a>
+                            <a href="{{ route('pembayaran.index') }}"
+                                class="list-group-item list-group-item-action {{ request()->routeIs('pembayaran.index') ? 'active' : '' }}">
+                                <i class="fas fa-dollar-sign"></i> <span class="d-none d-sm-inline">Pembayaran</span>
+                            </a>
                         </div>
                     </div>
                 @endauth
