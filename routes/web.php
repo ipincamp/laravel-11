@@ -30,4 +30,5 @@ Route::controller(App\Http\Controllers\PembayaranController::class)->group(funct
     Route::get('/pembayaran', 'index')->name('pembayaran.index');
     Route::post('/pembayaran', 'store')->name('pembayaran.store');
     Route::delete('/pembayaran/{nis}', 'destroy')->name('pembayaran.destroy');
+    Route::get('pembayaran/export', 'export')->name('pembayaran.export');
 });

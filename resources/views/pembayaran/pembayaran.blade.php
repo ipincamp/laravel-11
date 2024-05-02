@@ -20,6 +20,11 @@
                                 <i class="fas fa-plus"></i> Tambah Pembayaran
                             </button>
                             <!-- Button Modal Tambah -->
+                            <!-- Button Export -->
+                            <a href="{{ route('pembayaran.export') }}" class="btn btn-secondary">
+                                <i class="fas fa-file-export"></i> Export
+                            </a>
+                            <!-- Button Export -->
                         </div>
                     </div>
                     <div class="card-body">

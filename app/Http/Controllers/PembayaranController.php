@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PembayaransExport;
 use App\Models\Pembayaran;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PembayaranController extends Controller
 {
@@ -54,5 +56,10 @@ class PembayaranController extends Controller
         Pembayaran::where('nis', $nis)->delete();
 
         return back();
+    }
+
+    public function export()
+    {
+        return Excel::download(new PembayaransExport, 'pembayaran-export.xlsx');
     }
 }
