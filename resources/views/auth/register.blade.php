@@ -70,6 +70,25 @@
                         </div>
                     </form>
                 </div>
+
+                <div class="card-footer">
+                    <div class="row mb-2">
+                        <div class="col-md-12 text-center">
+                            {{ __('Or register with') }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <a href="{{ url('auth/google') }}" class="btn btn-primary btn-sm">
+                                {{ __('Google') }}
+                            </a>
+
+                            <a href="{{ url('auth/github') }}" class="btn btn-dark btn-sm">
+                                {{ __('GitHub') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
